@@ -5,16 +5,29 @@
 export default {
   defaultAddress: 'mumble05.omgserv.com',
   defaultPort: 10002,
-  defaultUsername: '',
-  defaultPassword: '',
-  tokens: [],
   joinOnConnect: true,
   hideAddress: true,
   hidePort: true,
-  hideTokens: true,
+  hideUsername: false,
   hidePassword: false,
+  hideTokens: true,
+  hideOverlay: true,
+  hideSelfDeaf: true,
+  hideSelfMute: false,
+  hideDeaf: true,
+  hideMute: true,
+  hideAvatar: true,
+  hideCert: true,
+  hideHostMessage: true,
+  hideConnectionStatus: true,
+  hideLatency: true,
+  hideChannelTree: true,
+  hideSettings: true,
+  hideAudioSettings: true,
+  hideUsernameInHeader: true,
   showCertificateWarning: false,
 };
+
 
 // E.g. changing default address and theme:
 // config.defaults.address = 'voice.example.com'
