@@ -3,7 +3,7 @@
   "version": "0.5.1",
   "description": "An HTML5 Mumble client.",
   "scripts": {
-    "build": "webpack && cp app/config.local.js dist/",
+    "build": "rm -rf dist && cp app/config.local.js app/config.js && webpack",
     "prepare": "rm -rf dist",
     "postinstall": "patch-package"
   },
