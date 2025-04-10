@@ -22,6 +22,7 @@ window.mumbleWebConfig = {
     startDeaf: false,
     joinDialog: true
   },
+  locale: 'en',
   hideOverlay: true,
   hideChannelTree: true,
   hideSelfDeaf: true,
