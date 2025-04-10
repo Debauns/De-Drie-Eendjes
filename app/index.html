@@ -21,6 +21,7 @@
     <script src="matrix.js"></script>
   </head>
   <body>
+    <div id="aantal" data-bind="text: ui.users().length + ' deelnemer(s)'"></div>
     <div class="loading-container" data-bind="css: { loaded: true }">
       <div class="loading-circle" data-bind="css: { loaded: true }"></div>
     </div>
