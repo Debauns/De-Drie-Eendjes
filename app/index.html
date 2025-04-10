@@ -32,14 +32,17 @@
     </div>
     <!-- /ko -->
 
-    <!-- KO alleen een mute-knop -->
+    <!-- KO mute-knop en aantal gebruikers -->
     <div data-bind="visible: thisUser">
       <button data-bind="click: function () { selfMute(!selfMute()) }">
         <span data-bind="text: selfMute() ? 'Unmute' : 'Mute'"></span>
       </button>
+
+      <!-- ko with: ui -->
+        <p>Aantal deelnemers: <span data-bind="text: users().length"></span></p>
+      <!-- /ko -->
     </div>
 
-    <!-- Main script -->
     <script src="index.js"></script>
   </body>
 </html>
