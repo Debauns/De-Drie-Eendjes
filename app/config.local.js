@@ -9,11 +9,6 @@ window.mumbleWebConfig = {
   },
   settings: {
     voiceMode: 'vad',
-    pttKey: 'ctrl + shift',
-    vadLevel: 0.3,
-    toolbarVertical: false,
-    showAvatars: 'never',
-    userCountInChannelName: false,
     audioBitrate: 40000,
     samplesPerPacket: 960
   },
@@ -25,8 +20,7 @@ window.mumbleWebConfig = {
     theme: '',
     startMute: false,
     startDeaf: false,
-    joinDialog: true,
-    matrix: false
+    joinDialog: true
   },
   hideOverlay: true,
   hideChannelTree: true,
