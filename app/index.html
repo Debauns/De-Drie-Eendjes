@@ -3,33 +3,43 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mumble Web</title>
+
+    <!-- Configuratie en theming -->
     <script src="config.js"></script>
     <script src="config.local.js"></script>
     <script src="theme.js"></script>
     <script src="matrix.js"></script>
   </head>
   <body>
-    <!-- Minimal login form -->
+    <!-- KO login-formulier -->
     <!-- ko with: connectDialog -->
-    <div class="connect-dialog dialog" data-bind="visible: visible()">
+    <div class="connect-dialog dialog" data-bind="visible: visible() && !joinOnly()">
+      <div id="connect-dialog_title">Connect to Server</div>
       <form data-bind="submit: connect">
-        <label for="username">Gebruikersnaam</label>
-        <input id="username" type="text" data-bind="value: username" required>
-        <label for="password">Wachtwoord</label>
-        <input id="password" type="password" data-bind="value: password">
-        <input type="submit" value="Verbinden">
+        <div>
+          <label id="connect-dialog_input_username" for="username">Gebruikersnaam</label>
+          <input id="username" type="text" data-bind="value: username" required>
+        </div>
+        <div>
+          <label id="connect-dialog_input_password" for="password">Wachtwoord</label>
+          <input id="password" type="password" data-bind="value: password">
+        </div>
+        <div class="dialog-footer">
+          <input id="connect-dialog_controls_connect" type="submit" value="Verbinden">
+        </div>
       </form>
     </div>
     <!-- /ko -->
 
-    <!-- Alleen mute-knop en aantal gebruikers -->
+    <!-- KO alleen een mute-knop -->
     <div data-bind="visible: thisUser">
       <button data-bind="click: function () { selfMute(!selfMute()) }">
         <span data-bind="text: selfMute() ? 'Unmute' : 'Mute'"></span>
       </button>
-      <p>Aantal deelnemers: <span data-bind="text: ui.users().length"></span></p>
     </div>
 
+    <!-- Main script -->
     <script src="index.js"></script>
   </body>
 </html>
