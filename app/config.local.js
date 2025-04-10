@@ -1,34 +1,41 @@
-// You can overwrite the default configuration values set in [config.js] here.
-// There should never be any required changes to this file and you can always
-// simply copy it over when updating to a new version.
-
-export default {
-  defaultAddress: 'mumble05.omgserv.com',
-  defaultPort: 10002,
-  joinOnConnect: true,
-  hideAddress: true,
-  hidePort: true,
-  hideUsername: false,
-  hidePassword: false,
-  hideTokens: true,
+window.mumbleWebConfig = {
+  connectDialog: {
+    address: false,
+    port: false,
+    token: false,
+    username: true,
+    password: true,
+    channelName: false
+  },
+  settings: {
+    voiceMode: 'vad',
+    pttKey: 'ctrl + shift',
+    vadLevel: 0.3,
+    toolbarVertical: false,
+    showAvatars: 'never',
+    userCountInChannelName: false,
+    audioBitrate: 40000,
+    samplesPerPacket: 960
+  },
+  defaults: {
+    address: 'mumble05.omgserv.com',
+    port: '10002',
+    username: '',
+    password: '',
+    theme: '',
+    startMute: false,
+    startDeaf: false,
+    joinDialog: true,
+    matrix: false
+  },
   hideOverlay: true,
-  hideSelfDeaf: true,
-  hideSelfMute: false,
-  hideDeaf: true,
-  hideMute: true,
-  hideAvatar: true,
-  hideCert: true,
-  hideHostMessage: true,
-  hideConnectionStatus: true,
-  hideLatency: true,
   hideChannelTree: true,
+  hideSelfDeaf: true,
   hideSettings: true,
-  hideAudioSettings: true,
-  hideUsernameInHeader: true,
-  showCertificateWarning: false,
-};
-
-
-// E.g. changing default address and theme:
-// config.defaults.address = 'voice.example.com'
-// config.defaults.theme = 'MetroMumbleDark'
+  hideUsers: true,
+  hideConfigure: true,
+  hideHelp: true,
+  hideAbout: true,
+  hideConnectionStatus: true,
+  hideComment: true
+}
